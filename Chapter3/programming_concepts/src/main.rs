@@ -98,4 +98,50 @@ fn main() {
     let element = _a[index];
 
     println!("The value of the element at index {index} is: {element}");
+
+    // functions
+
+    another_function(5);
+    print_labeled_measurement(10, 'h');
+
+    // Statements are instructions that perform some action and do not return a value
+    // Expressions evaluate to a resultant value. 
+    // for example of a statement
+    let _y = 6;
+    // Statements do not return values. This will cause an error.
+    // let x = (let y = 6);
+    // Calling a function is an expression.
+    
+    let _y = {
+        let x = 3;
+        x + 1
+    };
+
+    println!("The value of y is {_y}");
+
+    let _x = five();
+
+    println!("The value of x is {_x}");
+
+    let _x = plus_one(_x);
+
+    println!("The value of x after plus one is {_x}");
+}
+
+fn another_function(x: i32) {
+    println!("The value of x is: {x}.");
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}");
+}
+
+fn five() -> i32 {
+    5
+    // This works because 5 itself does not have semicolon at the end which mean it is an
+    // expression.
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
