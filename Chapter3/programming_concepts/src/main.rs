@@ -126,6 +126,14 @@ fn main() {
     let _x = plus_one(_x);
 
     println!("The value of x after plus one is {_x}");
+
+    let number = 3;
+
+    if number < 5 {
+        println!("condition are true");
+    } else {
+        println!("condition was false");
+    }
 }
 
 fn another_function(x: i32) {
