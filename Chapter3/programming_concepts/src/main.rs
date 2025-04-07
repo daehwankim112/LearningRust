@@ -134,6 +134,51 @@ fn main() {
     } else {
         println!("condition was false");
     }
+
+    let _condition = true;
+
+    // This won't work. Variables must have a single type
+    // let number = if condition { 5 } else { "six" };
+
+    println!("The value of number is: {number}");
+
+    // Different types of loop
+
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {result}");
+
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!");
+
+    let _a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("the value is: {}", _a[index]);
+
+        index += 1;
+    }
+
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF");
 }
 
 fn another_function(x: i32) {
